@@ -47,4 +47,6 @@ javascripts/phonegap.$(pgver).js: $(PG_JS_CORE)/license.js $(PG_JS_CORE)/phonega
 	$(CAT) $(PG_JS_CORE)/telephony.js >> $@
 	$(CAT) $(PG_JS_CORE)/network.js >> $@
 	
-	
+test:
+	GHUNIT_CLI=1 xcodebuild -target Tests -configuration Debug -sdk iphonesimulator4.2 -parallelizeTargets
+

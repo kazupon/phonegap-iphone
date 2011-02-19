@@ -10,6 +10,8 @@ function Device()
     this.name     = null;
     this.phonegap      = null;
     this.uuid     = null;
+    this.wifiIPAddress = null;
+    this.wifiMACAddress = null;
     try 
 	{      
 		this.platform = DeviceInfo.platform;
@@ -17,7 +19,8 @@ function Device()
 		this.name     = DeviceInfo.name;
 		this.phonegap = DeviceInfo.gap;
 		this.uuid     = DeviceInfo.uuid;
-
+        this.wifiIPAddress = DeviceInfo.wifiIPAddress;
+        this.wifiMACAddress = DeviceInfo.wifiMACAddress;
     } 
 	catch(e) 
 	{

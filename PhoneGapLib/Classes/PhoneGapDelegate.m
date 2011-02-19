@@ -12,6 +12,7 @@
 #import "Movie.h"
 #import "InvokedUrlCommand.h"
 #import "Contact.h"
+#import "UIDevice+Additions.h"
 
 @implementation PhoneGapDelegate
 
@@ -320,6 +321,8 @@ static NSString *gapVersion;
     [devProps setObject:[device systemVersion] forKey:@"version"];
     [devProps setObject:[device uniqueIdentifier] forKey:@"uuid"];
     [devProps setObject:[device name] forKey:@"name"];
+    [devProps setObject:[device WiFiIPAddress] forKey:@"wifiIPAddress"];
+    [devProps setObject:[device WiFiMACAddress] forKey:@"wifiMACAddress"];
     [devProps setObject:[[self class] phoneGapVersion ] forKey:@"gap"];
 	
     NSDictionary *devReturn = [NSDictionary dictionaryWithDictionary:devProps];

@@ -44,6 +44,13 @@
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = PhoneGapLib;
 		};
+		CB5C63DE13101D3300124DFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* PhoneGapLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CBA79F69130BBF8200CF7741;
+			remoteInfo = Tests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				301BF535109A57CC0062928A /* libPhoneGapLib.a */,
+				CB5C63DF13101D3300124DFF /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +253,13 @@
 			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		CB5C63DF13101D3300124DFF /* Tests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Tests.app;
+			remoteRef = CB5C63DE13101D3300124DFF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -309,6 +324,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PhoneGapLibTest_Prefix.pch;
 				INFOPLIST_FILE = "PhoneGapLibTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = PhoneGapLibTest;
 			};
 			name = Debug;
