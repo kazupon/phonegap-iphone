@@ -48,6 +48,8 @@
                         }
                         [macAddress appendFormat:@"%02X", base[i]];
                     }
+
+		            freeifaddrs(addrs);
                     return [NSString stringWithString:macAddress];
                 }
             }
@@ -75,6 +77,7 @@
                     [name isEqualToString:@"en1"]) {
                  NSString* addressString = 
                     [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)cursor->ifa_addr)->sin_addr)];
+
                  freeifaddrs(addrs);
                  return addressString;
                 }
@@ -88,3 +91,4 @@
 }
 
 @end
+
